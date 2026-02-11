@@ -6,46 +6,128 @@
 }
 
 body{
-    background:black !important;
-    color:#d4af37 !important;
-}
-
-/* TITULOS */
-h1, h2, h3{
-    color:#d4af37 !important;
-    text-shadow:0 0 10px #d4af37;
+    background:#000;
+    color:#fff;
 }
 
 /* NAVBAR */
 .navbar{
-    background:black !important;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#000;
+    border-bottom:1px solid #d4af37;
 }
 
 .logo{
-    color:#d4af37 !important;
+    font-size:22px;
     font-weight:bold;
+    color:#d4af37;
 }
 
-/* LINKS */
-a{
-    color:#d4af37 !important;
+.menu a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#d4af37;
+    font-weight:500;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+    url("https://i.postimg.cc/YhVjLvR5/ChatGPT-Image-10-de-fev-de-2026-19-36-13.png")
+    no-repeat center center;
+    background-size:cover;
+}
+
+.hero-content h1{
+    font-size:45px;
+    color:#d4af37;
+}
+
+.hero-content p{
+    margin-top:15px;
+    color:#ccc;
 }
 
 /* BOTÕES */
-button,
 .btn-primary,
 .btn-secondary,
 .btn-nav{
-    background:#d4af37 !important;
-    color:black !important;
-    border:none;
-    padding:12px 25px;
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    background:#d4af37;
+    color:#000;
     border-radius:25px;
+    text-decoration:none;
     font-weight:bold;
 }
 
+.btn-primary:hover,
+.btn-secondary:hover{
+    background:#b8962e;
+}
+
+/* SEÇÕES */
+.section{
+    padding:100px 8%;
+    text-align:center;
+    background:#000;
+}
+
+.section h2{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
 /* CARDS */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
 .card{
-    background:#111 !important;
+    background:#111;
+    padding:30px;
+    border-radius:15px;
     border:1px solid #d4af37;
+    flex:1;
+}
+
+.card h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    border-top:1px solid #d4af37;
+    color:#d4af37;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+    .cards{
+        flex-direction:column;
+    }
+
+    .hero-content h1{
+        font-size:28px;
+    }
+
+    .menu{
+        display:none;
+    }
 }
