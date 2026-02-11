@@ -2,206 +2,50 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-    scroll-behavior:smooth;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    color:#fff;
-    background:
-        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-        url("https://i.postimg.cc/YhVjLvR5/ChatGPT-Image-10-de-fev-de-2026-19-36-13.png")
-        no-repeat center center fixed;
-    background-size:cover;
+    background:black !important;
+    color:#d4af37 !important;
+}
+
+/* TITULOS */
+h1, h2, h3{
+    color:#d4af37 !important;
+    text-shadow:0 0 10px #d4af37;
 }
 
 /* NAVBAR */
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    position:fixed;
-    width:100%;
-    background:rgba(0,0,0,0.7);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+    background:black !important;
 }
 
 .logo{
-    font-size:24px;
+    color:#d4af37 !important;
     font-weight:bold;
-    color:#d4af37; /* dourado */
-    text-shadow:0 0 10px rgba(212,175,55,0.6);
 }
 
-.menu{
-    display:flex;
-    gap:25px;
+/* LINKS */
+a{
+    color:#d4af37 !important;
 }
 
-.menu a{
-    text-decoration:none;
-    color:#d4af37;
-    font-weight:500;
-    transition:0.3s;
-}
-
-.menu a:hover{
-    color:#fff;
-}
-
-/* BOTÃO NAV */
+/* BOTÕES */
+button,
+.btn-primary,
+.btn-secondary,
 .btn-nav{
-    padding:8px 18px;
-    border-radius:25px;
-    background:#d4af37;
+    background:#d4af37 !important;
     color:black !important;
+    border:none;
+    padding:12px 25px;
+    border-radius:25px;
     font-weight:bold;
-}
-
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 8%;
-}
-
-.hero-box{
-    background:rgba(0,0,0,0.6);
-    padding:60px;
-    border-radius:20px;
-    border:1px solid rgba(212,175,55,0.3);
-}
-
-.hero h1{
-    font-size:50px;
-    color:#d4af37;
-    text-shadow:0 0 15px rgba(212,175,55,0.7);
-}
-
-.hero p{
-    margin-top:15px;
-    color:#ccc;
-}
-
-/* BOTÃO PRINCIPAL */
-.btn-primary{
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 40px;
-    background:#d4af37;
-    color:black;
-    font-weight:bold;
-    border-radius:30px;
-    text-decoration:none;
-    transition:0.4s;
-}
-
-.btn-primary:hover{
-    background:#b8962e;
-    box-shadow:0 0 20px rgba(212,175,55,0.8);
-    transform:scale(1.05);
-}
-
-/* SEÇÕES */
-.section{
-    padding:120px 8%;
-    text-align:center;
-    background:rgba(0,0,0,0.9);
-}
-
-.section h2{
-    color:#d4af37;
-    margin-bottom:20px;
-    font-size:35px;
-}
-
-.section p{
-    color:#ccc;
 }
 
 /* CARDS */
-.cards{
-    display:flex;
-    gap:30px;
-    margin-top:40px;
-}
-
 .card{
-    flex:1;
-    padding:35px;
-    border-radius:20px;
-    background:rgba(20,20,20,0.9);
-    border:1px solid rgba(212,175,55,0.3);
-    transition:0.4s;
-}
-
-.card h3{
-    color:#d4af37;
-    margin-bottom:15px;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 20px rgba(212,175,55,0.6);
-}
-
-/* CONTADOR */
-.counter-box h3{
-    font-size:40px;
-    color:#d4af37;
-}
-
-/* BOTÃO SECUNDÁRIO */
-.btn-secondary{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 40px;
-    border-radius:30px;
-    background:#d4af37;
-    color:black;
-    font-weight:bold;
-    text-decoration:none;
-}
-
-/* RESPONSIVO */
-.menu-toggle{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-    color:#d4af37;
-}
-
-@media(max-width:900px){
-
-    .menu{
-        display:none;
-        flex-direction:column;
-        position:absolute;
-        top:70px;
-        right:8%;
-        background:black;
-        padding:20px;
-        border-radius:10px;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
-
-    .cards{
-        flex-direction:column;
-    }
-
-    .hero h1{
-        font-size:30px;
-    }
-
-    .hero-box{
-        padding:30px;
-    }
+    background:#111 !important;
+    border:1px solid #d4af37;
 }
