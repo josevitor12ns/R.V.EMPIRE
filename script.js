@@ -1,8 +1,8 @@
 // MENU MOBILE
-const toggle = document.getElementById("menu-toggle");
+const toggle = document.getElementById("toggle");
 const menu = document.getElementById("menu");
 
-toggle.addEventListener("click", function(){
+toggle.addEventListener("click", () => {
     if(menu.style.display === "flex"){
         menu.style.display = "none";
     } else {
@@ -11,39 +11,15 @@ toggle.addEventListener("click", function(){
 });
 
 // ANIMAÇÃO AO ROLAR
-window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", () => {
+    const elements = document.querySelectorAll(".reveal");
 
-function reveal(){
-    const reveals = document.querySelectorAll(".reveal");
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight - 100;
 
-    for(let i=0;i<reveals.length;i++){
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 100;
-
-        if(elementTop < windowHeight - elementVisible){
-            reveals[i].classList.add("active");
+        if(position < screenPosition){
+            el.classList.add("active");
         }
-    }
-}
-
-// CONTADOR ANIMADO
-const counters = document.querySelectorAll(".counter");
-
-counters.forEach(counter => {
-    counter.innerText = '0';
-    const updateCounter = () => {
-        const target = +counter.getAttribute("data-target");
-        const c = +counter.innerText;
-
-        const increment = target / 200;
-
-        if(c < target){
-            counter.innerText = `${Math.ceil(c + increment)}`;
-            setTimeout(updateCounter,10);
-        } else {
-            counter.innerText = target;
-        }
-    };
-    updateCounter();
+    });
 });

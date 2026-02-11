@@ -3,10 +3,15 @@
     padding:0;
     box-sizing:border-box;
     font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#000;
+    background:
+    linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.9)),
+    url("https://i.postimg.cc/YhVjLvR5/ChatGPT-Image-10-de-fev-de-2026-19-36-13.png")
+    no-repeat center center fixed;
+    background-size:cover;
     color:#fff;
 }
 
@@ -16,34 +21,44 @@ body{
     justify-content:space-between;
     align-items:center;
     padding:20px 8%;
-    background:#000;
+    background:rgba(0,0,0,0.8);
     border-bottom:1px solid #d4af37;
+    position:fixed;
+    width:100%;
+    z-index:1000;
 }
 
 .logo{
-    font-size:22px;
-    font-weight:bold;
     color:#d4af37;
+    font-weight:bold;
+    font-size:22px;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
 }
 
 .menu a{
-    margin-left:20px;
-    text-decoration:none;
     color:#d4af37;
-    font-weight:500;
+    text-decoration:none;
+}
+
+.btn-nav{
+    background:#d4af37;
+    color:#000 !important;
+    padding:8px 20px;
+    border-radius:20px;
 }
 
 /* HERO */
 .hero{
-    height:90vh;
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
-    url("https://i.postimg.cc/YhVjLvR5/ChatGPT-Image-10-de-fev-de-2026-19-36-13.png")
-    no-repeat center center;
-    background-size:cover;
+    padding:0 8%;
 }
 
 .hero-content h1{
@@ -56,30 +71,27 @@ body{
     color:#ccc;
 }
 
-/* BOTÕES */
-.btn-primary,
-.btn-secondary,
-.btn-nav{
+.btn-primary{
     display:inline-block;
     margin-top:25px;
-    padding:12px 30px;
+    padding:15px 35px;
     background:#d4af37;
     color:#000;
-    border-radius:25px;
+    border-radius:30px;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover{
+.btn-primary:hover{
     background:#b8962e;
 }
 
 /* SEÇÕES */
 .section{
-    padding:100px 8%;
+    padding:120px 8%;
     text-align:center;
-    background:#000;
+    background:rgba(0,0,0,0.95);
 }
 
 .section h2{
@@ -87,10 +99,8 @@ body{
     margin-bottom:20px;
 }
 
-/* CARDS */
 .cards{
     display:flex;
-    justify-content:center;
     gap:30px;
     margin-top:40px;
 }
@@ -108,16 +118,54 @@ body{
     margin-bottom:10px;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#000;
-    border-top:1px solid #d4af37;
-    color:#d4af37;
+.btn-secondary{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+    background:#d4af37;
+    color:#000;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-/* RESPONSIVO */
+/* ANIMAÇÃO */
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MENU MOBILE */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#d4af37;
+    cursor:pointer;
+}
+
 @media(max-width:900px){
+
+    .menu{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        right:8%;
+        background:#000;
+        padding:20px;
+        border:1px solid #d4af37;
+        border-radius:10px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
 
     .cards{
         flex-direction:column;
@@ -125,9 +173,5 @@ footer{
 
     .hero-content h1{
         font-size:28px;
-    }
-
-    .menu{
-        display:none;
     }
 }
