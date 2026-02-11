@@ -1,153 +1,88 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body{
-    background: url("bg-rv.png") no-repeat center center fixed;
-    background-size: cover;
-    color:white;
-    overflow-x:hidden;
-}
-
-/* NAVBAR */
-nav{
-    position:fixed;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    padding:20px 10%;
-    transition:0.4s;
-    z-index:1000;
-}
-
-nav.scrolled{
-    background:rgba(0,0,0,0.9);
-    box-shadow:0 0 20px gold;
-}
-
-nav h2{
-    color:gold;
-}
-
-nav ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:gold;
-}
-
-/* HERO */
-header{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:rgba(0,0,0,0.7);
-    text-align:center;
-}
-
-.hero h1{
-    font-size:55px;
-}
-
-.gold-text{
-    color:gold;
-    text-shadow:0 0 10px gold, 0 0 20px gold;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow{
-    from{ text-shadow:0 0 10px gold; }
-    to{ text-shadow:0 0 25px gold; }
-}
-
-.btn-gold{
-    display:inline-block;
-    margin-top:25px;
-    padding:15px 35px;
-    background:linear-gradient(45deg,gold,#b8860b);
-    color:black;
-    font-weight:bold;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.btn-gold:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 25px gold;
-}
-
-/* SECTIONS */
-section{
-    padding:100px 10%;
-    background:rgba(0,0,0,0.85);
-    text-align:center;
-}
-
-.cards{
-    display:flex;
-    gap:30px;
-    margin-top:40px;
-}
-
-.card{
-    flex:1;
-    padding:30px;
-    background:#111;
-    border:1px solid gold;
-    opacity:0;
-    transform:translateY(50px);
-    transition:0.6s;
-}
-
-.card.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.card:hover{
-    box-shadow:0 0 25px gold;
-    transform:translateY(-10px);
-}
-
-footer{
-    background:black;
-    padding:20px;
-    text-align:center;
-    border-top:1px solid gold;
-}
-
-/* RESPONSIVO */
-@media(max-width:900px){
-    .cards{
-        flex-direction:column;
-    }
-
-    .hero h1{
-        font-size:35px;
-    }
-
-    nav ul{
-        display:none;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
     background: 
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url("https://postimg.cc/YhVjLvR5/imagens/bg-rv.png") no-repeat center center fixed;
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://i.postimg.cc/YhVjLvR5/ChatGPT-Image-10-de-fev-de-2026-19-36-13.png") 
+        no-repeat center center fixed;
+
     background-size: cover;
 }
 
+/* NAVBAR */
+nav {
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: gold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* HERO */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header span {
+    color: gold;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: gold;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: black;
+    color: gold;
+    border: 1px solid gold;
+}
+
+section {
+    padding: 100px 10%;
+    background: rgba(0,0,0,0.85);
+    text-align: center;
+}
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid gold;
+}
