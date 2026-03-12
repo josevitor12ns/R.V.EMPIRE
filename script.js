@@ -1,25 +1,81 @@
-// MENU MOBILE
-const toggle = document.getElementById("toggle");
-const menu = document.getElementById("menu");
+const perguntas = [
 
-toggle.addEventListener("click", () => {
-    if(menu.style.display === "flex"){
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "flex";
-    }
-});
+{
 
-// ANIMAÇÃO AO ROLAR
-window.addEventListener("scroll", () => {
-    const elements = document.querySelectorAll(".reveal");
+pergunta:"Você quer ganhar dinheiro pela internet?",
 
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight - 100;
+opcoes:["Sim","Muito","Com certeza"]
 
-        if(position < screenPosition){
-            el.classList.add("active");
-        }
-    });
-});
+},
+
+{
+
+pergunta:"Você prefere trabalhar com:",
+
+opcoes:["Celular","Computador","Os dois"]
+
+},
+
+{
+
+pergunta:"Quanto você quer ganhar por mês?",
+
+opcoes:["R$500","R$2000","R$5000+"]
+
+}
+
+]
+
+let atual = 0
+
+function iniciar(){
+
+document.getElementById("inicio").style.display="none"
+
+document.getElementById("quiz").style.display="block"
+
+mostrar()
+
+}
+
+function mostrar(){
+
+let p = perguntas[atual]
+
+document.getElementById("pergunta").innerText = p.pergunta
+
+let html=""
+
+p.opcoes.forEach(op=>{
+
+html += `<div class="opcao" onclick="proxima()">${op}</div>`
+
+})
+
+document.getElementById("opcoes").innerHTML = html
+
+let progresso = ((atual) / perguntas.length) * 100
+
+document.getElementById("barra").style.width = progresso + "%"
+
+}
+
+function proxima(){
+
+atual++
+
+if(atual < perguntas.length){
+
+mostrar()
+
+}else{
+
+document.getElementById("barra").style.width="100%"
+
+document.getElementById("quiz").style.display="none"
+
+document.getElementById("final").style.display="block"
+
+}
+
+}
